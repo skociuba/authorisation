@@ -132,6 +132,9 @@ exports[`<Application /> render without crashing 1`] = `
     <button>
       Polish
     </button>
+    <button>
+      logOut
+    </button>
     <div
       class="emotion-0"
     >
