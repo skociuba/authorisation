@@ -25,7 +25,7 @@ const Test = () => {
 
   const {t} = useTranslation();
 
-  const user = 'John Travolta';
+  const user = JSON.parse(localStorage.getItem('userName'));
 
   const translations = useMemo(() => getTranslations(t, user), [t, user]);
 

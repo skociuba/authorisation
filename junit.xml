@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="25" failures="0" errors="0" time="33.926">
-  <testsuite name="&lt;Application /&gt;" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:36:47" time="6.47" tests="1">
-    <testcase classname="&lt;Application /&gt; render without crashing" name="&lt;Application /&gt; render without crashing" time="0.099">
+<testsuites name="jest tests" tests="25" failures="0" errors="0" time="40.902">
+  <testsuite name="Application reducers" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:07" time="7.215" tests="1">
+    <testcase classname="Application reducers config reducers returns config state " name="Application reducers config reducers returns config state " time="0.016">
     </testcase>
   </testsuite>
-  <testsuite name="Test component" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:36:53" time="1.73" tests="3">
-    <testcase classname="Test component displays loading skeleton when testLoadingExample is true" name="Test component displays loading skeleton when testLoadingExample is true" time="0.212">
+  <testsuite name="Test component" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:14" time="2.626" tests="3">
+    <testcase classname="Test component displays loading skeleton when testLoadingExample is true" name="Test component displays loading skeleton when testLoadingExample is true" time="0.371">
     </testcase>
-    <testcase classname="Test component dispatches fetchTestData action on mount" name="Test component dispatches fetchTestData action on mount" time="0.033">
+    <testcase classname="Test component dispatches fetchTestData action on mount" name="Test component dispatches fetchTestData action on mount" time="0.034">
     </testcase>
-    <testcase classname="Test component displays test data when testData is not null" name="Test component displays test data when testData is not null" time="0.111">
-    </testcase>
-  </testsuite>
-  <testsuite name="getFormattedDater()" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:36:56" time="1.276" tests="2">
-    <testcase classname="getFormattedDater() render right data" name="getFormattedDater() render right data" time="0.074">
-    </testcase>
-    <testcase classname="getSubtractedDays() render right data" name="getSubtractedDays() render right data" time="0.004">
+    <testcase classname="Test component displays test data when testData is not null" name="Test component displays test data when testData is not null" time="0.124">
     </testcase>
   </testsuite>
-  <testsuite name="Test reducers" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:36:57" time="1.148" tests="3">
-    <testcase classname="Test reducers Test reducers returns loading state " name="Test reducers Test reducers returns loading state " time="0.007">
+  <testsuite name="getMapping" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:17" time="1.444" tests="2">
+    <testcase classname="getMapping expect to mapping correctly" name="getMapping expect to mapping correctly" time="0">
     </testcase>
-    <testcase classname="Test reducers Test reducers returns success state " name="Test reducers Test reducers returns success state " time="0.001">
-    </testcase>
-    <testcase classname="Test reducers Test reducers returns error state " name="Test reducers Test reducers returns error state " time="0.001">
+    <testcase classname="getMapping expect to mapping correctly" name="getMapping expect to mapping correctly" time="0.016">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;RequireParam/&gt;" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:36:58" time="1.213" tests="1">
-    <testcase classname="&lt;RequireParam/&gt; render without crashing" name="&lt;RequireParam/&gt; render without crashing" time="0.038">
+  <testsuite name="application - selectors" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:19" time="1.217" tests="2">
+    <testcase classname="application - selectors return application" name="application - selectors return application" time="0.01">
+    </testcase>
+    <testcase classname="application - selectors return params" name="application - selectors return params" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="Application reducers" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:37:00" time="1.115" tests="1">
-    <testcase classname="Application reducers config reducers returns config state " name="Application reducers config reducers returns config state " time="0">
+  <testsuite name="&lt;RequireSearchParam/&gt;" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:20" time="1.212" tests="1">
+    <testcase classname="&lt;RequireSearchParam/&gt; render without crashing" name="&lt;RequireSearchParam/&gt; render without crashing" time="0.045">
     </testcase>
   </testsuite>
-  <testsuite name="getOrdinalTextSuffix()" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:37:01" time="1.093" tests="1">
-    <testcase classname="getOrdinalTextSuffix() encode data" name="getOrdinalTextSuffix() encode data" time="0.004">
+  <testsuite name="Test reducers" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:22" time="1.324" tests="3">
+    <testcase classname="Test reducers Test reducers returns loading state " name="Test reducers Test reducers returns loading state " time="0.004">
+    </testcase>
+    <testcase classname="Test reducers Test reducers returns success state " name="Test reducers Test reducers returns success state " time="0">
+    </testcase>
+    <testcase classname="Test reducers Test reducers returns error state " name="Test reducers Test reducers returns error state " time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Test - transport" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:37:02" time="1.177" tests="1">
-    <testcase classname="Test - transport return getTestData" name="Test - transport return getTestData" time="0.037">
+  <testsuite name="&lt;Application /&gt;" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:23" time="1.178" tests="1">
+    <testcase classname="&lt;Application /&gt; render without crashing" name="&lt;Application /&gt; render without crashing" time="0.1">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;RequireSearchParam/&gt;" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:37:03" time="1.222" tests="1">
-    <testcase classname="&lt;RequireSearchParam/&gt; render without crashing" name="&lt;RequireSearchParam/&gt; render without crashing" time="0.049">
+  <testsuite name="&lt;RequireParam/&gt;" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:24" time="1.174" tests="1">
+    <testcase classname="&lt;RequireParam/&gt; render without crashing" name="&lt;RequireParam/&gt; render without crashing" time="0.05">
     </testcase>
   </testsuite>
-  <testsuite name="getLinkWithParameter()" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:37:05" time="1.189" tests="3">
+  <testsuite name="&lt;RouteNotFound/&gt;" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:26" time="1.149" tests="1">
+    <testcase classname="&lt;RouteNotFound/&gt; render without crashing" name="&lt;RouteNotFound/&gt; render without crashing" time="0.035">
+    </testcase>
+  </testsuite>
+  <testsuite name="getFormattedDater()" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:27" time="1.162" tests="2">
+    <testcase classname="getFormattedDater() render right data" name="getFormattedDater() render right data" time="0.067">
+    </testcase>
+    <testcase classname="getSubtractedDays() render right data" name="getSubtractedDays() render right data" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test - transport" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:28" time="1.102" tests="1">
+    <testcase classname="Test - transport return getTestData" name="Test - transport return getTestData" time="0.033">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test - response mappers" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:29" time="1.081" tests="1">
+    <testcase classname="Test - response mappers return correct test data" name="Test - response mappers return correct test data" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="getLinkWithParameter()" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:31" time="1.093" tests="3">
     <testcase classname="getLinkWithParameter() customer channel renders link" name="getLinkWithParameter() customer channel renders link" time="0">
     </testcase>
-    <testcase classname="getLinkWithParameter() staff channel renders link" name="getLinkWithParameter() staff channel renders link" time="0.016">
+    <testcase classname="getLinkWithParameter() staff channel renders link" name="getLinkWithParameter() staff channel renders link" time="0">
     </testcase>
     <testcase classname="encodeQueryData() encode data" name="encodeQueryData() encode data" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;RouteNotFound/&gt;" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:37:06" time="1.177" tests="1">
-    <testcase classname="&lt;RouteNotFound/&gt; render without crashing" name="&lt;RouteNotFound/&gt; render without crashing" time="0.042">
+  <testsuite name="Test - selectors" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:32" time="1.119" tests="2">
+    <testcase classname="Test - selectors return test data" name="Test - selectors return test data" time="0">
+    </testcase>
+    <testcase classname="Test - selectors return test loading" name="Test - selectors return test loading" time="0.046">
     </testcase>
   </testsuite>
-  <testsuite name="getMapping" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:37:07" time="1.396" tests="2">
-    <testcase classname="getMapping expect to mapping correctly" name="getMapping expect to mapping correctly" time="0.016">
-    </testcase>
-    <testcase classname="getMapping expect to mapping correctly" name="getMapping expect to mapping correctly" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="application - selectors" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:37:09" time="1.139" tests="2">
-    <testcase classname="application - selectors return application" name="application - selectors return application" time="0">
-    </testcase>
-    <testcase classname="application - selectors return params" name="application - selectors return params" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="Test - selectors" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:37:10" time="1.085" tests="2">
-    <testcase classname="Test - selectors return test data" name="Test - selectors return test data" time="0.004">
-    </testcase>
-    <testcase classname="Test - selectors return test loading" name="Test - selectors return test loading" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="Test - response mappers" errors="0" failures="0" skipped="0" timestamp="2023-06-07T08:37:11" time="1.04" tests="1">
-    <testcase classname="Test - response mappers return correct test data" name="Test - response mappers return correct test data" time="0">
+  <testsuite name="getOrdinalTextSuffix()" errors="0" failures="0" skipped="0" timestamp="2023-06-09T17:37:33" time="1.43" tests="1">
+    <testcase classname="getOrdinalTextSuffix() encode data" name="getOrdinalTextSuffix() encode data" time="0.015">
     </testcase>
   </testsuite>
 </testsuites>

@@ -7,7 +7,7 @@ const loginVerification = (body, backend) =>
 router.post('/', (req, res) => {
   try {
     if (loginVerification(req.body, login)) {
-      res.json({token: login?.token});
+      res.json({token: login?.token, data: login?.data});
     } else {
       res.status(400).send('invalid params');
     }

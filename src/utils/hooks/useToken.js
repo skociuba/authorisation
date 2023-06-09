@@ -10,7 +10,9 @@ const useToken = () => {
   const [token, setToken] = useState(getToken());
 
   const saveToken = (userToken) => {
-    localStorage.setItem('token', JSON.stringify(userToken));
+    localStorage.setItem('token', JSON.stringify(userToken.token));
+    localStorage.setItem('userName', JSON.stringify(userToken.data.userName));
+    localStorage.setItem('isSole', JSON.stringify(userToken.data.isSoleCustomer));
     setToken(userToken.token);
   };
 
