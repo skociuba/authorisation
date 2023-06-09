@@ -11,6 +11,7 @@ const TestPage = lazy(() => import('../pages/Test/Test'));
 const SubRoutes = lazy(() => import('../pages/SubPages/SubRoutes'));
 const SecondPage = lazy(() => import('../pages/SubPages/SecondPage'));
 const Landing = lazy(() => import('../pages/SubPages/Landing'));
+//const LoginPage= lazy(() => import('../pages/Login/Login'));
 
 const paths = {...shared.routes};
 
