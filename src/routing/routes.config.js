@@ -1,17 +1,17 @@
-import React, {lazy} from 'react';
-import {Route, Routes} from 'react-router-dom';
+import React, {lazy, useEffect} from 'react';
+import {Route, Routes, useNavigate} from 'react-router-dom';
 import RouteNotFound from 'routing/components/RouteNotFound';
 import RequireAuth from 'routing/components/RequireAuth';
 
 import Application from '../pages/Application/Application';
 import {shared} from '../sharedConstants';
-
+import useToken from '../utils/hooks/useToken';
 const MainPage = lazy(() => import('../pages/MainPage/MainPage'));
 const TestPage = lazy(() => import('../pages/Test/Test'));
 const SubRoutes = lazy(() => import('../pages/SubPages/SubRoutes'));
 const SecondPage = lazy(() => import('../pages/SubPages/SecondPage'));
 const Landing = lazy(() => import('../pages/SubPages/Landing'));
-//const LoginPage= lazy(() => import('../pages/Login/Login'));
+const LoginPage = lazy(() => import('../pages/Login/Login'));
 
 const paths = {...shared.routes};
 
@@ -57,29 +57,45 @@ let routes = [
   },
 ];
 
-export const Routing = () => (
-  <Routes>
-    {routes.map((route, i) => (
-      <Route
-        path={route.path}
-        key={i}
-        element={
-          <RequireAuth paths={paths}>
-            <RouteNotFound path={route.path} redirectTo={paths.mainPage.root}>
-              <Application>
-                <route.element />
-              </Application>
-            </RouteNotFound>
-          </RequireAuth>
-        }>
-        {route.children
-          ? route.children.map((subRoute, e) => (
-              <Route path={subRoute.path} key={e} element={<subRoute.element />} />
-            ))
-          : null}
-      </Route>
-    ))}
-  </Routes>
-);
+export const Routing = () => {
+  const navigate = useNavigate();
 
+  const {setToken} = useToken();
+
+  const token = window.localStorage.getItem('token');
+
+  useEffect(() => {
+    if (token) {
+      navigate('/main-page');
+    } else {
+      navigate('/login-page');
+    }
+  }, [token]);
+
+  return (
+    <Routes>
+      <Route element={<RequireAuth paths={paths} />}>
+        {routes.map((route, i) => (
+          <Route
+            path={route.path}
+            key={i}
+            element={
+              <RouteNotFound path={route.path} redirectTo={paths.mainPage.root}>
+                <Application>
+                  <route.element />
+                </Application>
+              </RouteNotFound>
+            }>
+            {route.children
+              ? route.children.map((subRoute, e) => (
+                  <Route path={subRoute.path} key={e} element={<subRoute.element />} />
+                ))
+              : null}
+          </Route>
+        ))}
+      </Route>
+      <Route path={paths.loginPage.root} element={<LoginPage setToken={setToken} />} />
+    </Routes>
+  );
+};
 export default Routing;

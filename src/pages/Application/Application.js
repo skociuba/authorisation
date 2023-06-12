@@ -70,10 +70,11 @@ const Application = ({children}) => {
   };
 
   const logOut = () => {
-    localStorage.removeItem('token');
-    navigate('/login-page');
+    window.location.reload();
+    localStorage.clear();
+
     if (localStorage.getItem('token') === null) {
-      window.location.reload();
+      navigate('/login-page');
     }
   };
 

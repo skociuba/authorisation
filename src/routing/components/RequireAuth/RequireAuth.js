@@ -1,21 +1,10 @@
-import React, {lazy} from 'react';
-const Login = lazy(() => import('../../../pages/Login/Login'));
-import {Route, Routes} from 'react-router-dom';
+import {Outlet, Navigate} from 'react-router-dom';
 
-import useToken from '../../../utils/hooks/useToken';
-const RequireAuth = ({children, paths}) => {
-  const {token, setToken} = useToken();
-  return (
-    <>
-      {!token ? (
-        <Routes>
-          <Route path={paths.loginPage.root} element={<Login setToken={setToken} />} />
-        </Routes>
-      ) : (
-        children
-      )}
-    </>
-  );
+const RequireAuth = () => {
+  const token = window.localStorage.getItem('token');
+  console.log(token);
+
+  return token ? <Outlet /> : <Navigate to="/login-page" />;
 };
 
 export default RequireAuth;
