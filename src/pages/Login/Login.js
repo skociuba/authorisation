@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+import {useNavigate} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 
 import {fetchLoginData} from './actions';
@@ -7,6 +8,7 @@ import {loginDataSelector, loginLoadingSelector, errorSelector} from './selector
 import {loginWrapper} from './Login.style.js';
 
 const Login = ({setToken}) => {
+  const navigate = useNavigate();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
 
@@ -28,6 +30,7 @@ const Login = ({setToken}) => {
   useEffect(() => {
     if (loginData) {
       setToken(loginData);
+      navigate('/');
     }
   }, [loginData, setToken]);
 

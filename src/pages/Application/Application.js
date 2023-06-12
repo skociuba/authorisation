@@ -4,6 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {shared} from 'sharedConstants';
 import {media, useMedia} from 'components/Media';
 import {useTranslation} from 'react-i18next';
+import {debounce} from 'lodash';
 
 import {Row, Column} from './../../components/Packages/Grid/index';
 import {getTranslations} from './translations';
@@ -71,11 +72,8 @@ const Application = ({children}) => {
 
   const logOut = () => {
     window.location.reload();
-    localStorage.clear();
-
-    if (localStorage.getItem('token') === null) {
-      navigate('/login-page');
-    }
+    debounce(localStorage.clear(), 1000);
+    debounce(localStorage.clear(), navigate('/login-page'), 2000);
   };
 
   const content = () => {

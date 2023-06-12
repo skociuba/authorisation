@@ -1,5 +1,5 @@
-import React, {lazy, useEffect} from 'react';
-import {Route, Routes, useNavigate} from 'react-router-dom';
+import React, {lazy} from 'react';
+import {Route, Routes} from 'react-router-dom';
 import RouteNotFound from 'routing/components/RouteNotFound';
 import RequireAuth from 'routing/components/RequireAuth';
 
@@ -58,23 +58,11 @@ let routes = [
 ];
 
 export const Routing = () => {
-  const navigate = useNavigate();
-
   const {setToken} = useToken();
-
-  const token = window.localStorage.getItem('token');
-
-  useEffect(() => {
-    if (token) {
-      navigate('/main-page');
-    } else {
-      navigate('/login-page');
-    }
-  }, [token]);
 
   return (
     <Routes>
-      <Route element={<RequireAuth paths={paths} />}>
+      <Route element={<RequireAuth />}>
         {routes.map((route, i) => (
           <Route
             path={route.path}
@@ -94,6 +82,7 @@ export const Routing = () => {
           </Route>
         ))}
       </Route>
+
       <Route path={paths.loginPage.root} element={<LoginPage setToken={setToken} />} />
     </Routes>
   );
