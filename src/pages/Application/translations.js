@@ -9,4 +9,13 @@ export const getTranslations = (t) => ({
   SubRoutes: t(`${APPLICATION}:SubRoutes`),
   ForStaff: t(`${APPLICATION}:ForStaff`),
   ForCustomer: t(`${APPLICATION}:ForCustomer`),
+  breadcrumbs: {
+    home: t(`${APPLICATION}:Home`),
+    greeting: t(`${APPLICATION}:greeting`),
+    'test-page': t(`${APPLICATION}:testPage`),
+    'sub-pages': t(`${APPLICATION}:subPage`),
+    'main-page': t(`${APPLICATION}:mainPage`),
+    landing: t(`${APPLICATION}:landing`),
+    secondPages: t(`${APPLICATION}:staffSubPage`),
+  },
 });

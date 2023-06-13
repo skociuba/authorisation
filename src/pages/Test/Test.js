@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import PropTypes from 'prop-types';
-import Breadcrumbs from 'components/Packages/Breadcrumbs/Breadcrumbs';
+import Breadcrumbs from 'components/Packages/BreadcrumbsOld/Breadcrumbs';
 import {useTranslation} from 'react-i18next';
 
 import useBreadcrumbs from '../../utils/hooks/useBreadcrumbs';

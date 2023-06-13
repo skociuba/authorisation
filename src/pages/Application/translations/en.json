@@ -6,5 +6,12 @@
   "Test": "TEST",
   "SubRoutes": "SUBROUTES",
   "ForStaff": "FOR STAFF",
-  "ForCustomer": "FOR CUSTOMER"
+  "ForCustomer": "FOR CUSTOMER",
+  "Home": "Home Page",
+  "mainPage": "Main Page",
+  "testPage": "Test Page",
+  "landing": "Sub Page",
+  "staffSubPage": "Sub Page for Staff",
+  "subPage": "Sub Pages",
+  "greeting": "Greeting"
 }

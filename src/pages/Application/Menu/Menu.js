@@ -1,12 +1,14 @@
 import React from 'react';
 import {media, useMedia} from 'components/Media';
 
+import {Breadcrumbs} from '../../../components/Packages/Breadcrumbs/index';
+
 import {Row, Column} from './../../../components/Packages/Grid/index';
 import {menuTheme, mobileMenuContainer, desktopContainer, activeButton} from './Menu.style';
 
 const Menu = ({data, handleNavigation, translations}) => {
   const isMobile = useMedia(media.device.mobile);
-
+  const userName = JSON.parse(localStorage.getItem('userName'));
   const menuMobile = data.menu.primary.map((item, i) => (
     <Row spacing={1} key={i}>
       <Column>
@@ -32,6 +34,13 @@ const Menu = ({data, handleNavigation, translations}) => {
   ) : (
     <div className={desktopContainer}>{menuDesktop}</div>
   );
-  return <div className={menuTheme}>{menu}</div>;
+  return (
+    <div className={menuTheme}>
+      {menu}
+      <p>
+        <Breadcrumbs translations={translations} userName={userName} />
+      </p>
+    </div>
+  );
 };
 export default Menu;

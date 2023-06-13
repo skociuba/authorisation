@@ -6,5 +6,12 @@
   "Test": "TESTOWA",
   "SubRoutes": "SUBROUTES",
   "ForStaff": "DLA PERSONELU",
-  "ForCustomer": "DLA KLIENTÓW"
+  "ForCustomer": "DLA KLIENTÓW",
+  "Home": "Strona Domowa",
+  "mainPage": "Strona Główna",
+  "testPage": "Strona Testowa",
+  "landing": "Podstrona Ogólna",
+  "staffSubPage": "Podstrona dla Personelu",
+  "subPage": "Podstrony",
+  "greeting": "Witaj"
 }
