@@ -17,5 +17,6 @@ export const getTranslations = (t) => ({
     'main-page': t(`${APPLICATION}:mainPage`),
     landing: t(`${APPLICATION}:landing`),
     secondPages: t(`${APPLICATION}:staffSubPage`),
+    'denied-page': t(`${APPLICATION}:deniedPage`),
   },
 });

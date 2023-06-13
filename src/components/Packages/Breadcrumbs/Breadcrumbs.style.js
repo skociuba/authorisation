@@ -10,4 +10,3 @@ export const breadcrumbsContainer = css`
 export const breadcrumbs = css`
   display: flex;
 `;
-export const greetingContainer = css``;

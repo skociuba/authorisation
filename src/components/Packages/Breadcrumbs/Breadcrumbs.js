@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
 
-import {breadcrumbs, greetingContainer, breadcrumbsContainer} from './Breadcrumbs.style';
+import {breadcrumbs, breadcrumbsContainer} from './Breadcrumbs.style';
 const Breadcrumbs = ({translations, userName}) => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
@@ -31,10 +31,7 @@ const Breadcrumbs = ({translations, userName}) => {
           );
         })}
       </span>
-      <span
-        className={
-          greetingContainer
-        }>{`${translations?.breadcrumbs?.greeting} : ${userName}`}</span>
+      <span>{`${translations?.breadcrumbs?.greeting} : ${userName}`}</span>
     </div>
   );
 };
