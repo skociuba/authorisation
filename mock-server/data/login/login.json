@@ -1,6 +1,6 @@
 {
   "token": "test123",
-  "data": {"isSoleCustomer": true, "userName": "Kociuba Sebastian"},
+  "data": {"isSoleCustomer": true, "userName": "Kociuba Sebastian", "role": "user"},
   "password": "basia81",
   "username": "skociuba83@gmail.com"
 }

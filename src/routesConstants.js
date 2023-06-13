@@ -11,6 +11,9 @@ const routes = {
   loginPage: {
     root: generatePrefixedRootContext('login-page'),
   },
+  deniedPage: {
+    root: generatePrefixedRootContext('denied-page'),
+  },
   subRoutes: {
     root: generatePrefixedRootContext('sub-pages'),
     landing: generatePrefixedRootContext('sub-pages/landing'),

@@ -73,7 +73,7 @@ const Application = ({children}) => {
   const logOut = () => {
     window.location.reload();
     debounce(localStorage.clear(), 1000);
-    debounce(localStorage.clear(), navigate('/login-page'), 2000);
+    debounce(navigate('/login-page'), 2000);
   };
 
   const content = () => {

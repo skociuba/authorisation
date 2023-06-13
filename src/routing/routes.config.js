@@ -2,6 +2,7 @@ import React, {lazy} from 'react';
 import {Route, Routes} from 'react-router-dom';
 import RouteNotFound from 'routing/components/RouteNotFound';
 import RequireAuth from 'routing/components/RequireAuth';
+import OnlyForStaff from 'routing/components/OnlyForStaff';
 
 import Application from '../pages/Application/Application';
 import {shared} from '../sharedConstants';
@@ -12,6 +13,7 @@ const SubRoutes = lazy(() => import('../pages/SubPages/SubRoutes'));
 const SecondPage = lazy(() => import('../pages/SubPages/SecondPage'));
 const Landing = lazy(() => import('../pages/SubPages/Landing'));
 const LoginPage = lazy(() => import('../pages/Login/Login'));
+const DeniedPage = lazy(() => import('../pages/DeniedPage/DeniedPage'));
 
 const paths = {...shared.routes};
 
@@ -32,8 +34,8 @@ let routes = [
     exact: true,
   },
   {
-    path: paths.testPage.root,
-    element: TestPage,
+    path: paths.deniedPage.root,
+    element: DeniedPage,
     exact: true,
   },
   {
@@ -43,10 +45,12 @@ let routes = [
       {
         path: paths.subRoutes.landing,
         element: Landing,
+        protected: false,
       },
       {
         path: paths.subRoutes.secondPages,
         element: SecondPage,
+        protected: true,
       },
     ],
   },
@@ -76,7 +80,11 @@ export const Routing = () => {
             }>
             {route.children
               ? route.children.map((subRoute, e) => (
-                  <Route path={subRoute.path} key={e} element={<subRoute.element />} />
+                  <>
+                    <Route element={<OnlyForStaff isProtected={subRoute.protected} />}>
+                      <Route path={subRoute.path} key={e} element={<subRoute.element />} />
+                    </Route>
+                  </>
                 ))
               : null}
           </Route>

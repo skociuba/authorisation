@@ -13,6 +13,7 @@ const useToken = () => {
     localStorage.setItem('token', JSON.stringify(userToken.token));
     localStorage.setItem('userName', JSON.stringify(userToken.data.userName));
     localStorage.setItem('isSole', JSON.stringify(userToken.data.isSoleCustomer));
+    localStorage.setItem('role', JSON.stringify(userToken.data.role));
     setToken(userToken.token);
   };
 
